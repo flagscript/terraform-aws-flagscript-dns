@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.1...v1.0.2) (2024-09-04)
+
+
+### Bug Fixes
+
+* **resolves #6:** Remove unused variable. ([41219c7](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/41219c7dfde217ba90eb947770e8341ed58f5d49)), closes [#6](https://github.com/flagscript/terraform-aws-flagscript-dns/issues/6)
+
 ## [1.0.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.0...v1.0.1) (2024-09-04)
 
 
