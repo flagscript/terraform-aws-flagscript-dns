@@ -1,19 +1,18 @@
 {
-  "name": "terraform-aws-flagscript-[descriptive]]",
-  "description": "[AWS Service] modules for flagscript setups adhering to reasonable aws standards.",
-  "main": "index.js",
+  "name": "terraform-aws-flagscript-dns",
+  "description": "Dns modules for flagscript setups adhering to reasonable aws standards.",
   "scripts": {
     "prepare": "husky"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/flagscript/terraform-aws-flagscript-kms.git"
+    "url": "git+https://github.com/flagscript/terraform-aws-flagscript-dns.git"
   },
   "keywords": [
     "flagscript",
     "aws",
     "terraform",
-    "kms"
+    "dns"
   ],
   "author": {
     "name": "Greg Kaestle",
@@ -21,9 +20,9 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/flagscript/terraform-aws-flagscript-kms/issues"
+    "url": "https://github.com/flagscript/terraform-aws-flagscript-dns/issues"
   },
-  "homepage": "https://github.com/flagscript/terraform-aws-flagscript-kms#readme",
+  "homepage": "https://github.com/flagscript/terraform-aws-flagscript-dns#readme",
   "dependencies": {
     "husky": "^9.1.5"
   }
