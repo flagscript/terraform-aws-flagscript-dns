@@ -1,19 +1,19 @@
-variable "dnssec_key_alias_arn" {
+output "dnssec_key_alias_arn" {
   description = "The Amazon Resource Name (ARN) of the key alias."
-  type        = string
+  value       = aws_kms_alias.dnssec_key_alias.arn
 }
 
-variable "dnssec_key_alias_name" {
+output "dnssec_key_alias_name" {
   description = "The display name of the alias."
-  type        = string
+  value       = aws_kms_alias.dnssec_key_alias.name
 }
 
-variable "dnssec_key_arn" {
+output "dnssec_key_arn" {
   description = "The Amazon Resource Name (ARN) of the key."
-  type        = string
+  value       = aws_kms_key.dnssec_key.arn
 }
 
-variable "dnssec_key_id" {
+output "dnssec_key_id" {
   description = "The globally unique identifier for the key."
-  type        = string
+  value       = aws_kms_key.dnssec_key.key_id
 }
