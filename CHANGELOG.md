@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.0...v1.0.1) (2024-09-04)
+
+
+### Bug Fixes
+
+* **resolves #4:** Fix setup module outputs. ([d13db16](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/d13db1684f16a4aa5613e7e3f7730b619d8659b6)), closes [#4](https://github.com/flagscript/terraform-aws-flagscript-dns/issues/4)
+
 # 1.0.0 (2024-09-04)
 
 
