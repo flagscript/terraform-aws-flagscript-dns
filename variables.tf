@@ -1,9 +1,5 @@
 # REQUIRED PARAMETERS
 # These parameters must be supplied when consuming this module.
-variable "hosted_zone_name" {
-  description = "The name of the hosted zone."
-  type        = string
-}
 
 # OPTIONAL PARAMETERS
 # These parameters have reasonable defaults.
