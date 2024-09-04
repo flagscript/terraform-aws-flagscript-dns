@@ -34,7 +34,6 @@ No modules.
 |------|-------------|------|---------|:--------:|
 | <a name="input_dnssec_hosted_zone_ids"></a> [dnssec\_hosted\_zone\_ids](#input\_dnssec\_hosted\_zone\_ids) | List of hosted zones ids to use dnssec with. | `list(string)` | `[]` | no |
 | <a name="input_enable_key_rotation"></a> [enable\_key\_rotation](#input\_enable\_key\_rotation) | Specifies whether dnsseckey rotation is enabled. Defaults to false. | `bool` | `false` | no |
-| <a name="input_hosted_zone_name"></a> [hosted\_zone\_name](#input\_hosted\_zone\_name) | The name of the hosted zone. | `string` | n/a | yes |
 | <a name="input_key_deletion_window_in_days"></a> [key\_deletion\_window\_in\_days](#input\_key\_deletion\_window\_in\_days) | The waiting period, specified in number of days. Defaults to 7. | `number` | `7` | no |
 
 ## Outputs
