@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.2...v1.1.0) (2024-09-05)
+
+
+### Features
+
+* **resolves #9:** Add dnssec record and domain registration module. ([5a2837c](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/5a2837c52a92e31e519dd40c979e0870cf2795de)), closes [#9](https://github.com/flagscript/terraform-aws-flagscript-dns/issues/9)
+
 ## [1.0.2](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.1...v1.0.2) (2024-09-04)
 
 
