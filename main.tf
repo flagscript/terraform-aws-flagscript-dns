@@ -119,3 +119,14 @@ resource "aws_cloudwatch_log_resource_policy" "route53_query_logging_policy" {
   policy_document = data.aws_iam_policy_document.route53_query_logging_policy.json
   policy_name     = "route53-query-logging-policy"
 }
+
+# Route 53 Domains
+resource "aws_route53domains_delegation_signer_record" "dns_signer_record" {
+  domain_name = "example.com"
+
+  signing_attributes {
+    algorithm  = aws_route53_key_signing_key.example.signing_algorithm_type
+    flags      = aws_route53_key_signing_key.example.flag
+    public_key = aws_route53_key_signing_key.example.public_key
+  }
+}
