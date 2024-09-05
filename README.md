@@ -24,6 +24,7 @@ No modules.
 | [aws_kms_alias.dnssec_key_alias](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_alias) | resource |
 | [aws_kms_key.dnssec_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key) | resource |
 | [aws_kms_key_policy.dnssec_signing_kms_key_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/kms_key_policy) | resource |
+| [aws_route53domains_delegation_signer_record.dns_signer_record](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53domains_delegation_signer_record) | resource |
 | [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity) | data source |
 | [aws_iam_policy_document.dnssec_key_policy_document](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
 | [aws_iam_policy_document.route53_query_logging_policy](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/iam_policy_document) | data source |
@@ -40,8 +41,11 @@ No modules.
 
 | Name | Description |
 |------|-------------|
+| <a name="output_dnssec_flag"></a> [dnssec\_flag](#output\_dnssec\_flag) | An integer that specifies how the key is used. For key-signing key (KSK), this value is always 257. |
 | <a name="output_dnssec_key_alias_arn"></a> [dnssec\_key\_alias\_arn](#output\_dnssec\_key\_alias\_arn) | The Amazon Resource Name (ARN) of the key alias. |
 | <a name="output_dnssec_key_alias_name"></a> [dnssec\_key\_alias\_name](#output\_dnssec\_key\_alias\_name) | The display name of the alias. |
 | <a name="output_dnssec_key_arn"></a> [dnssec\_key\_arn](#output\_dnssec\_key\_arn) | The Amazon Resource Name (ARN) of the key. |
 | <a name="output_dnssec_key_id"></a> [dnssec\_key\_id](#output\_dnssec\_key\_id) | The globally unique identifier for the key. |
+| <a name="output_dnssec_public_key"></a> [dnssec\_public\_key](#output\_dnssec\_public\_key) | The public key, represented as a Base64 encoding, as required by RFC-4034 Page 5. |
+| <a name="output_dnssec_signing_algorithm_type"></a> [dnssec\_signing\_algorithm\_type](#output\_dnssec\_signing\_algorithm\_type) | An integer used to represent the signing algorithm. This value must follow the guidelines provided by RFC-8624 Section 3.1. |
 <!-- END_TF_DOCS -->
