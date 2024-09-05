@@ -25,14 +25,22 @@ No modules.
 | [aws_route53_key_signing_key.dnssec_signing_key](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_key_signing_key) | resource |
 | [aws_route53_query_log.query_log](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_query_log) | resource |
 | [aws_route53_zone.public_hosted_zone](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53_zone) | resource |
+| [aws_route53domains_delegation_signer_record.registered_domain_signer_record](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53domains_delegation_signer_record) | resource |
+| [aws_route53domains_registered_domain.registered_domain](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/route53domains_registered_domain) | resource |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_admin_privacy"></a> [admin\_privacy](#input\_admin\_privacy) | Whether domain administrative contact information is concealed from WHOIS queries. | `bool` | `true` | no |
+| <a name="input_auto_renew"></a> [auto\_renew](#input\_auto\_renew) | Whether the domain registration is set to renew automatically. | `bool` | `true` | no |
+| <a name="input_billing_privacy"></a> [billing\_privacy](#input\_billing\_privacy) | Whether domain billing contact information is concealed from WHOIS queries. | `bool` | `true` | no |
 | <a name="input_dnssec_key_arn"></a> [dnssec\_key\_arn](#input\_dnssec\_key\_arn) | The Amazon Resource Name (ARN) of the dnssec key. | `string` | n/a | yes |
 | <a name="input_hosted_zone_name"></a> [hosted\_zone\_name](#input\_hosted\_zone\_name) | The name of the hosted zone. | `string` | n/a | yes |
 | <a name="input_log_retention_in_days"></a> [log\_retention\_in\_days](#input\_log\_retention\_in\_days) | The number of days you want to retain log events in the specified log group. | `number` | `30` | no |
+| <a name="input_registrant_privacy"></a> [registrant\_privacy](#input\_registrant\_privacy) | Whether domain registrant contact information is concealed from WHOIS queries. | `bool` | `true` | no |
+| <a name="input_tech_privacy"></a> [tech\_privacy](#input\_tech\_privacy) | Whether domain technical contact information is concealed from WHOIS queries. | `bool` | `true` | no |
+| <a name="input_transfer_lock"></a> [transfer\_lock](#input\_transfer\_lock) | Whether the domain is locked for transfer. | `bool` | `true` | no |
 
 ## Outputs
 

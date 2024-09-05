@@ -39,3 +39,32 @@ resource "aws_route53_hosted_zone_dnssec" "dnssec" {
   hosted_zone_id = aws_route53_zone.public_hosted_zone.zone_id
   signing_status = "SIGNING"
 }
+
+# Route 53 Domains
+## Import registered domain
+resource "aws_route53domains_registered_domain" "registered_domain" {
+  admin_privacy      = var.admin_privacy
+  auto_renew         = var.auto_renew
+  billing_privacy    = var.billing_privacy
+  domain_name        = var.hosted_zone_name
+  registrant_privacy = var.registrant_privacy
+  tech_privacy       = var.tech_privacy
+  transfer_lock      = var.transfer_lock
+
+  tags = merge(
+    local.common_tags,
+    {
+      name = var.hosted_zone_name
+    }
+  )
+}
+
+resource "aws_route53domains_delegation_signer_record" "registered_domain_signer_record" {
+  domain_name = var.hosted_zone_name
+
+  signing_attributes {
+    algorithm  = aws_route53_key_signing_key.dnssec_signing_key.signing_algorithm_type
+    flags      = aws_route53_key_signing_key.dnssec_signing_key.flag
+    public_key = aws_route53_key_signing_key.dnssec_signing_key.public_key
+  }
+}
