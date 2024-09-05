@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.1.0...v1.2.0) (2024-09-05)
+
+
+### Features
+
+* **resolves #11:** Remove registration module. Refactor to public zone module. ([c329192](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/c329192b1d7bb6166417a6c23a98356b2ee807de)), closes [#11](https://github.com/flagscript/terraform-aws-flagscript-dns/issues/11)
+
 # [1.1.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.0.2...v1.1.0) (2024-09-05)
 
 
