@@ -1,29 +1,26 @@
 {
   "name": "terraform-aws-flagscript-dns",
   "description": "Dns modules for flagscript setups adhering to reasonable aws standards.",
+  "private": true,
   "scripts": {
-    "prepare": "husky"
+    "preinstall": "npx only-allow pnpm",
+    "semantic-release": "semantic-release"
+  },
+  "engines": {
+    "node": ">=24",
+    "pnpm": ">=11"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/flagscript/terraform-aws-flagscript-dns.git"
   },
-  "keywords": [
-    "flagscript",
-    "aws",
-    "terraform",
-    "dns"
-  ],
-  "author": {
-    "name": "Greg Kaestle",
-    "email": "flagscript@gmail.com"
-  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/flagscript/terraform-aws-flagscript-dns/issues"
-  },
-  "homepage": "https://github.com/flagscript/terraform-aws-flagscript-dns#readme",
-  "dependencies": {
-    "husky": "^9.1.5"
+  "devDependencies": {
+    "@commitlint/cli": "21.2.4",
+    "@commitlint/config-conventional": "21.2.4",
+    "@semantic-release/changelog": "7.0.0",
+    "@semantic-release/git": "11.0.1",
+    "@semantic-release/github": "12.0.10",
+    "semantic-release": "25.0.9"
   }
 }

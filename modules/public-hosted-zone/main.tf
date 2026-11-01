@@ -60,6 +60,7 @@ resource "aws_route53domains_registered_domain" "registered_domain" {
 }
 
 resource "aws_route53domains_delegation_signer_record" "registered_domain_signer_record" {
+  depends_on  = [aws_route53_hosted_zone_dnssec.dnssec]
   domain_name = var.hosted_zone_name
 
   signing_attributes {
@@ -67,4 +68,5 @@ resource "aws_route53domains_delegation_signer_record" "registered_domain_signer
     flags      = aws_route53_key_signing_key.dnssec_signing_key.flag
     public_key = aws_route53_key_signing_key.dnssec_signing_key.public_key
   }
+
 }

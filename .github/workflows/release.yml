@@ -4,9 +4,17 @@ on:
     branches:
       - main
 
+permissions:
+  contents: read # default for all jobs
+
 jobs:
   main:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write # push tags, create GitHub releases
+      issues: write # comment on/label released issues
+      pull-requests: write # comment on released PRs
+      id-token: write # only if using npm provenance / trusted publishing
     environment:
       name: release #your environment name
     steps:
@@ -18,4 +26,4 @@ jobs:
       - name: Semantic Release
         uses: cycjimmy/semantic-release-action@v4
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
