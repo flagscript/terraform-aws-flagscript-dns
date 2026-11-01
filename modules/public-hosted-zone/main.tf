@@ -15,9 +15,13 @@ resource "aws_route53_zone" "public_hosted_zone" {
   tags = merge(
     local.common_tags,
     {
-      name = var.hosted_zone_name
+      "Name" = var.hosted_zone_name
     }
   )
+
+  lifecycle {
+    ignore_changes = [signing_attributes]
+  }
 }
 
 resource "aws_route53_query_log" "query_log" {
@@ -54,7 +58,7 @@ resource "aws_route53domains_registered_domain" "registered_domain" {
   tags = merge(
     local.common_tags,
     {
-      name = var.hosted_zone_name
+      "Name" = var.hosted_zone_name
     }
   )
 }
