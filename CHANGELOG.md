@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.0...v1.2.1) (2026-11-01)
+
+
+### Bug Fixes
+
+* force dnssec dependancy ([9c96a8c](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/9c96a8c97bfe08823206b6129fa8dae9adebe969))
+
 # [1.2.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.1.0...v1.2.0) (2024-09-05)
 
 
