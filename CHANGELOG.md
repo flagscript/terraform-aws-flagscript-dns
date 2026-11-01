@@ -1,3 +1,11 @@
+## [1.2.2](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.1...v1.2.2) (2026-11-01)
+
+
+### Bug Fixes
+
+* switch casing on name tags ([b163277](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/b1632774886c9a7e177ac8e6d88c402ecb8c12a9))
+* switch casing on name tags, ignore signing attribute changes ([2eb1b2f](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/2eb1b2f98d68832a62ebba17181c4969e114cb1b))
+
 ## [1.2.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.0...v1.2.1) (2026-11-01)
 
 
