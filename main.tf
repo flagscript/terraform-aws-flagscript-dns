@@ -12,7 +12,7 @@ resource "aws_kms_key" "dnssec_key" {
   tags = merge(
     local.common_tags,
     {
-      "name" = "dnssec"
+      "Name" = "dnssec"
     }
   )
 }
