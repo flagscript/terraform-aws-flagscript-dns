@@ -18,10 +18,6 @@ resource "aws_route53_zone" "public_hosted_zone" {
       "Name" = var.hosted_zone_name
     }
   )
-
-  lifecycle {
-    ignore_changes = [signing_attributes]
-  }
 }
 
 resource "aws_route53_query_log" "query_log" {
@@ -71,6 +67,10 @@ resource "aws_route53domains_delegation_signer_record" "registered_domain_signer
     algorithm  = aws_route53_key_signing_key.dnssec_signing_key.signing_algorithm_type
     flags      = aws_route53_key_signing_key.dnssec_signing_key.flag
     public_key = aws_route53_key_signing_key.dnssec_signing_key.public_key
+  }
+
+  lifecycle {
+    ignore_changes = [signing_attributes]
   }
 
 }
