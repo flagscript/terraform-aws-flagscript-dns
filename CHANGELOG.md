@@ -1,3 +1,10 @@
+## [1.2.3](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.2...v1.2.3) (2026-11-01)
+
+
+### Bug Fixes
+
+* move signing_attributes ignore to proper place ([e64c7eb](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/e64c7eb3c7a6c47a81a73bfc97b4f90299719bb3))
+
 ## [1.2.2](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.1...v1.2.2) (2026-11-01)
 
 
