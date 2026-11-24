@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v2.0.0...v2.0.1) (2026-11-24)
+
+
+### Bug Fixes
+
+* add us-east-1 region tags to regional resources ([07cb0ad](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/07cb0ad11291c7a6a082eb49d20d75576d8ea762))
+
 # [2.0.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.3...v2.0.0) (2026-11-24)
 
 
