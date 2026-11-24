@@ -12,7 +12,8 @@ resource "aws_cloudwatch_log_group" "query_log_group" {
   tags = merge(
     local.common_tags,
     {
-      "Name" = "/aws/route53/${var.zone_domain}"
+      "Name"   = "/aws/route53/${var.zone_domain}"
+      "region" = "us-east-1"
     }
   )
 }

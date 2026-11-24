@@ -13,7 +13,8 @@ resource "aws_kms_key" "dnssec_key" {
   tags = merge(
     local.common_tags,
     {
-      "Name" = var.key_name
+      "Name"   = var.key_name
+      "region" = "us-east-1"
     }
   )
 }
