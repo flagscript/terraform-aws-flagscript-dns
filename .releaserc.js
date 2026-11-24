@@ -1,24 +1,3 @@
-const { name } = require("./package.json");
-const moduleName = name.replace(/^@[^/]+\//, "");
-const tarExcludes = [
-  "./.config",
-  "./.github",
-  "./.pnpm-store",
-  "./.vscode",
-  "./node_modules",
-  "./reports",
-  "./.gitattributes",
-  "./.gitignore",
-  "./.gitlab-ci.yml",
-  "./.lefthook.yaml",
-  "./.releaserc.js",
-  "./.terraform.lock.hcl",
-  "./package.json",
-  "./pnpm-lock.yaml",
-]
-  .map((p) => `--exclude=${p}`)
-  .join(" ");
-
 module.exports = {
   branches: ["main"],
   plugins: [
@@ -40,7 +19,9 @@ module.exports = {
     [
       "@semantic-release/git",
       {
-        assets: ["CHANGELOG.md"],
+        // The pre sign-up Lambda bundle is built by the release workflow just before
+        // semantic-release runs, so each release tag carries a bundle built from its source.
+        assets: ["CHANGELOG.md", "RELEASE.md"],
         message: "chore(release): ${nextRelease.version} [skip ci]",
       },
     ],
