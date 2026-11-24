@@ -12,15 +12,30 @@ jobs:
     name: Test terraform modules
     runs-on: ubuntu-latest
     permissions:
-      contents: write # push tags, create GitHub releases
-      issues: write # comment on/label released issues
-      pull-requests: write # comment on released PRs
-      id-token: write # only if using npm provenance / trusted publishing
+      contents: read
     steps:
       - name: Checkout source
         uses: actions/checkout@v5
       - name: Setup terraform
         uses: hashicorp/setup-terraform@v3
+        with:
+          terraform_wrapper: false
       - name: Terraform fmt
-        run: terraform fmt -check
+        run: terraform fmt -check -recursive -diff
         continue-on-error: false
+      # Modules that declare provider configuration_aliases (the root module,
+      # cognito-auth-pool) can't be validated on their own; the root module is
+      # validated through examples/*, which pass it the aliased providers.
+      - name: Terraform validate (examples and submodules)
+        run: |
+          set -e
+          for dir in examples/*/ modules/*/; do
+            if grep -q configuration_aliases "$dir"*.tf; then
+              echo "::notice::Skipping $dir: it needs aliased providers from a caller."
+              continue
+            fi
+            echo "::group::validate $dir"
+            terraform -chdir="$dir" init -backend=false -input=false > /dev/null
+            terraform -chdir="$dir" validate
+            echo "::endgroup::"
+          done
