@@ -1,3 +1,15 @@
+# [2.0.0](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.3...v2.0.0) (2026-11-24)
+
+
+### Features
+
+* ci allowing breaking commit syntax ([4a879c1](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/4a879c1b658ab70353bd93833bf2342c58073638))
+
+
+### BREAKING CHANGES
+
+* modules have been rearranged
+
 ## [1.2.3](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v1.2.2...v1.2.3) (2026-11-01)
 
 
