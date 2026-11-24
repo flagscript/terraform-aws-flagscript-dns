@@ -1,9 +1,14 @@
-data "aws_caller_identity" "current" {}
 locals {
-  current_account_id = data.aws_caller_identity.current.account_id
-  common_tags = {
-    "github:module:repository" = "flagscript/terraform-aws-flagscript-dns"
-    "terraform:module"         = "terraform-aws-flagscript-dns"
-  }
+  # Components
+  enable_dnssec        = var.dnssec_key_arn != null ? true : false
+  enable_query_logging = var.enable_query_logging
+  # Tagging
+  common_tags = merge(
+    {
+      "terraform:module:repository" = "https://github.com/flagscript/terraform-aws-flagscript-dns"
+      "terraform:module"            = "terraform-aws-flagscript-dns"
+    },
+    var.tags
+  )
 
 }
