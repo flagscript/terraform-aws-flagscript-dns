@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v2.0.1...v2.0.2) (2026-11-26)
+
+
+### Bug Fixes
+
+* add log stream wildcard with formatlist ([ee72dca](https://github.com/flagscript/terraform-aws-flagscript-dns/commit/ee72dcaa36434bdf3f90b29b502507dac95a6c74))
+
 ## [2.0.1](https://github.com/flagscript/terraform-aws-flagscript-dns/compare/v2.0.0...v2.0.1) (2026-11-24)
 
 
