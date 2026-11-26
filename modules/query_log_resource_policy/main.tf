@@ -5,7 +5,7 @@ data "aws_iam_policy_document" "route53_query_logging_policy" {
       "logs:PutLogEvents",
     ]
     effect    = "Allow"
-    resources = var.hosted_zone_log_group_arns
+    resources = formatlist("%s:*", var.hosted_zone_log_group_arns)
     sid       = "AllowRoute53QueryLoggingToCloudWatchLogs"
 
     principals {
